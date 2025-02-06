@@ -7,12 +7,23 @@
     </head>
     <body>
     <a-scene vr-mode-ui="enabled:false" background="color:#24CAFF">
-        <a-entity animation="property:object3D.position.y;from:5:to:0;dur:4000;easing:easeOutCubic">
+        <a-entity animation="property:object3D.position.y;from:5;to:0;dur:4000;easing:easeOutCubic">
+            <a-entity position="0 880 1290" rotation="-34 0 0">
             <a-entity id="camera"camera="near: 1000; far; 4000; fov: 2.2"></a-entity>
-        </a-entity>
-        <a-entity animation="property:object3D.scale.y;from:0.0001:to;1;dur:4000;easing:easeOutCubic">
-            <a-box width="12.5" depth="1" height="30"color="#EF2D5E" position="o 15 0"></a-box>
-        </a-entity>
+        </a-entity></a-entity>
+        <a-entity id="logo" rotation="0 45 0">
+        <a-entity animation="property: object3D.scale.y; from: 0.0001; to: 1; delay: 200; dur: 1000; easing: easeOutCubic"
+        rotation="-20 0 0" position="0 0 10.75" scale="1 0.0001 1" event-set__loaded="visible: true; _delay: 300"
+        visible="false">
+        <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0">
+          <a-entity
+            animation="property: object3D.scale.y; from: 0.0001; to: 1; delay: 800; dur: 800; easing: easeOutCubic"
+            rotation="-140 0 0" position="0 15 0" scale="1 0.0001 1">
+            <a-box width="12.49" depth=".1" height="30" color="#24CAFF" position="0 15 -.52" shader="flat"></a-box>
+            <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0"></a-box>
+          </a-entity>
+        </a-box>
+      </a-entity>
     </a-scene>
 </body>
 </html>
